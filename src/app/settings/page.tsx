@@ -302,7 +302,7 @@ export default function SettingsPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {section.settings.map((setting) => (
+                {section.settings.map((setting: any) => (
                   <div key={setting.key} className="space-y-2">
                     <div className="flex items-start justify-between">
                       <div className="space-y-1 flex-1">
@@ -349,7 +349,7 @@ export default function SettingsPage() {
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                              {setting.options?.map((option) => (
+                              {setting?.options?.map((option: { label: string, value: string }) => (
                                 <SelectItem
                                   key={option.value}
                                   value={option.value}
